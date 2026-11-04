@@ -1,0 +1,1 @@
+import{createSlice}from"@reduxjs/toolkit";const s=createSlice({name:"auth",initialState:{user:null,isAuthenticated:!!localStorage.getItem("access")},reducers:{setUser:(x,a)=>{x.user=a.payload;x.isAuthenticated=true},logout:x=>{x.user=null;x.isAuthenticated=false}}});export const{setUser,logout}=s.actions;export default s.reducer;
